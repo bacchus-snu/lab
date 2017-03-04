@@ -1,0 +1,9 @@
+*/dist/
+.*.swp
+*.gz
+*.xz
+*.build
+*.dsc
+*.changes
+*.upload
+*.deb

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [[ -z "$3" ]]; then
+  echo "Usage: $0 <PackageName> <UpstreamVersion> <License>"
+  exit 1
+fi
+
+pkgname="$1"
+pkgver="$2"
+license=-c"$3"
+
+set -e
+
+dir=$(pwd)
+mkdir "$pkgname"
+cd "$pkgname"
+dh_make -p "$pkgname"_"$pkgver" --createorig "$license"
+mkdir src
+cd debian
+rm -f -- *.EX *.ex *.docs README.*
+cd "$dir"
+rm -f "$pkgname"_"$pkgver".orig.tar.xz
+exit 0
