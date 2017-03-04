@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+timedatectl set-ntp true
+
+exit 0

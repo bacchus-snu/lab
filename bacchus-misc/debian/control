@@ -1,0 +1,11 @@
+Source: bacchus-misc
+Section: misc
+Priority: optional
+Maintainer: JangHo Seo <jangho@jangho.kr>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+
+Package: bacchus-misc
+Architecture: all
+Depends: ${misc:Depends}, bash, grub, systemd
+Description: Miscellaneous settings after installing Ubuntu
