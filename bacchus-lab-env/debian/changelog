@@ -1,3 +1,9 @@
+bacchus-lab-env (0.1.1-1) xenial; urgency=medium
+
+  * Add hancomoffice-hwpviewer
+
+ -- JangHo Seo <jangho@jangho.kr>  Sat, 04 Mar 2017 21:55:57 +0900
+
 bacchus-lab-env (0.1-1) xenial; urgency=medium
 
   * Initial release
