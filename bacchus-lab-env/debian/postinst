@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+systemctl enable gdm.service
+systemctl disable NetworkManager.service
+
+exit 0
