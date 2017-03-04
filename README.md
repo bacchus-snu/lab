@@ -12,7 +12,7 @@
 
 ```bash
 cd <PackageName>
-../build --binary
+../build
 ```
 
 ### Publishing to PPA
