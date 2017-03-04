@@ -1,0 +1,5 @@
+bacchus-postdist (0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- JangHo Seo <jangho@jangho.kr>  Sat, 04 Mar 2017 19:45:55 +0900

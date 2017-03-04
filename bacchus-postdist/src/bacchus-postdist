@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+/usr/sbin/bacchus-snunet
+
+systemctl disable bacchus-postdist
+reboot
+exit 0

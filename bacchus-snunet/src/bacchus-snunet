@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -e
+
+systemctl disable networking.service
+systemctl stop networking.service
+systemctl enable systemd-networkd.service
+systemctl enable systemd-resolved.service
+systemctl start systemd-networkd.service
+systemctl start systemd-resolved.service
+
+oldhostname=$(hostname)
+pc=$(/usr/sbin/bacchus-pcdb-lookup)
+hostname=$(echo "$pc" | awk '{print $1}')
+ip=$(echo "$pc" | awk '{print $2}')
+gateway=$(echo "$ip" | awk -F"." '{print $1"."$2"."$3".1"}')
+iface=$(echo "$pc" | awk '{print $4}')
+
+cat > /etc/systemd/network/50-snunet.network <<EOF
+[Match]
+Name=$iface
+
+[Network]
+Address=$ip/24
+Gateway=$gateway
+DNS=147.46.80.1
+DNS=147.46.37.10
+EOF
+
+hostnamectl set-hostname "$hostname"
+hosts=$(grep -v "$oldhostname" /etc/hosts)
+echo "$hosts" > /etc/hosts
+cat >> /etc/hosts <<EOF
+127.0.0.1 $hostname
+EOF
+
+systemctl restart systemd-networkd.service
+systemctl restart systemd-resolved.service
+
+echo "$pc"
+
+exit 0

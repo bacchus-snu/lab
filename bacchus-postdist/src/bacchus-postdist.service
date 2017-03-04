@@ -1,0 +1,9 @@
+[Unit]
+Description=Reconfiguring connection to SNUNET
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/bacchus-postdist
+
+[Install]
+WantedBy=multi-user.target

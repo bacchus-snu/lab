@@ -1,0 +1,15 @@
+Source: bacchus-postdist
+Section: unknown
+Priority: optional
+Maintainer: JangHo Seo <jangho@jangho.kr>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://anonscm.debian.org/collab-maint/bacchus-postdist.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/bacchus-postdist.git
+
+Package: bacchus-postdist
+Architecture: all
+Depends: ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

@@ -1,0 +1,11 @@
+Source: bacchus-snunet
+Section: net
+Priority: optional
+Maintainer: JangHo Seo <jangho@jangho.kr>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+
+Package: bacchus-snunet
+Architecture: all
+Depends: ${misc:Depends}, gawk, grep, bash, hostname, systemd, bacchus-pcdb
+Description: Connecting to SNUNET
