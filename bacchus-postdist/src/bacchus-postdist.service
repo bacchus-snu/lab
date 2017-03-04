@@ -1,5 +1,5 @@
 [Unit]
-Description=Reconfiguring connection to SNUNET
+Description=Script to execute after cloning PCs
 
 [Service]
 Type=simple

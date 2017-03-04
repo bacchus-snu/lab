@@ -1,3 +1,9 @@
+bacchus-postdist (0.1.1-1) xenial; urgency=medium
+
+  * Fix description for systemd unit
+
+ -- JangHo Seo <jangho@jangho.kr>  Sat, 04 Mar 2017 20:52:56 +0900
+
 bacchus-postdist (0.1-1) xenial; urgency=medium
 
   * Initial release
