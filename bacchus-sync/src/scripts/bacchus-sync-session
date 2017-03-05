@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# domain normal login
+function domain_login() {
+  /usr/bin/bacchus-sync-logout-watch &
+  WATCH_PID=$!
+  gnome-session --session=gnome
+  kill $WATCH_PID
+}
+
+# domain login with transient home directory
+function domain_transient_login() {
+  TMP_HOME=$(mktemp -d)
+  cp -rT /sherry/.skel "$TMP_HOME"
+  chown -R "$USER":"$(id -gn "$USER")" "$TMP_HOME"
+  chmod 700 "$TMP_HOME"
+  HOME="$TMP_HOME"
+  gnome-session --session=gnome
+}
+
+# Local user: exit
+if [[ $HOME != /csehome/* ]]
+then
+  gnome-session --session=gnome
+  exit 0
+fi
+
+xsetroot -cursor_name left_ptr
+
+# Domain guest
+while IFS='' read -r line || [[ -n "$line" ]]
+do
+  if [[ "$line" == "$USER" ]]
+  then
+    GTK_THEME=Adapta /usr/bin/bacchus-sync --guest --login
+    RET=$?
+    if [[ $RET -eq 3 ]]
+    then
+      domain_transient_login
+      exit 0
+    fi
+    exit 1
+  fi
+done < /sherry/.guests
+
+# Domain user
+GTK_THEME=Adapta /usr/bin/bacchus-sync --domain --login
+RET=$?
+if [[ $RET -eq 0 ]]
+then
+  domain_login
+  exit 0
+fi
+if [[ $RET -eq 3 ]]
+then
+  domain_transient_login
+  exit 0
+fi
+exit 1

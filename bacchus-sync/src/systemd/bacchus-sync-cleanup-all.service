@@ -1,0 +1,10 @@
+[Unit]
+Description=Bacchus Domain User Cleanup All
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/bacchus-sync-cleanup-all
+WorkingDirectory=/csehome
+
+[Install]
+WantedBy=multi-user.target

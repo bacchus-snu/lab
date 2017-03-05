@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cd /csehome || exit 1
+for USERNAME in *
+do
+  if [[ -d "$USERNAME" ]] && [[ -f /sherry/.sync-status/"$USERNAME"/checkout ]]
+  then
+    CHECKED_OUT_AT=$(</sherry/.sync-status/"$USERNAME"/checkout)
+    if [[ "$HOSTNAME" = "$CHECKED_OUT_AT" ]]
+    then
+      USER="$USERNAME" HOME=/sherry/"$USERNAME" /usr/bin/bacchus-sync --domain --logout
+    fi
+  fi
+done
+
+sync
+
+exit 0

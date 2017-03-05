@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while true
+do
+  if [[ -f /sherry/.sync-status/"$USER"/logout ]]
+  then
+    gnome-session-quit --logout --force
+  fi
+  sleep 1
+done

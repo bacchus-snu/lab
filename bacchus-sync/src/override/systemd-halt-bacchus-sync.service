@@ -1,0 +1,7 @@
+[Unit]
+Description=Halt operation with Bacchus-sync
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "systemctl stop user.slice; systemctl stop gdm.service; /usr/bin/bacchus-sync-cleanup-all; systemctl start systemd-halt.service"

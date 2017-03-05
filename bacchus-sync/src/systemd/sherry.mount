@@ -1,0 +1,12 @@
+[Unit]
+Description="Home directory"
+After=network.target
+
+[Mount]
+What=sherry.snucse.org:/csehome
+Where=/sherry
+Type=nfs4
+Options=rsize=32768,wsize=32768
+
+[Install]
+WantedBy=multi-user.target

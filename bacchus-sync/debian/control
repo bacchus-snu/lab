@@ -1,0 +1,11 @@
+Source: bacchus-sync
+Section: net
+Priority: optional
+Maintainer: JangHo Seo <jangho@jangho.kr>
+Build-Depends: debhelper (>=9), valac, build-essential, libgtk-3-dev
+Standards-Version: 3.9.6
+
+Package: bacchus-sync
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gdm (>=3.18), libgtk-3-0 (>=3.18), libglib2.0-0 (>=2.32), x11-xserver-utils, bash, gnome-session-bin, systemd, findutils, coreutils, rsync, nfs-common
+Description: Home directory synchronization

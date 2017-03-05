@@ -1,0 +1,11 @@
+[Unit]
+Description=Power-Off with Bacchus-sync
+DefaultDependencies=no
+Requires=systemd-poweroff-bacchus-sync.service
+After=systemd-poweroff-bacchus-sync.service
+AllowIsolate=yes
+JobTimeoutSec=30min
+JobTimeoutAction=poweroff-force
+
+[Install]
+Alias=ctrl-alt-del.target

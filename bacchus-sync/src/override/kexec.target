@@ -1,0 +1,9 @@
+[Unit]
+Description=Reboot via kexec with Bacchus-sync
+DefaultDependencies=no
+Requires=systemd-kexec-bacchus-sync.service
+After=systemd-kexec-bacchus-sync.service
+AllowIsolate=yes
+
+[Install]
+Alias=ctrl-alt-del.target

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+systemctl enable bacchus-sync-cleanup-all.service sherry.mount
+
+cd /usr/share/xsessions
+find . -type f -name "*.desktop" -print0 | xargs -0 -L1 -I{} -- mv "{}" "{}.old"
+mv snucse-lab.desktop.old snucse-lab.desktop
+
+mkdir -p /sherry
+sudo chown root:root /sherry
+sudo chmod 711 /sherry
+
+systemctl start sherry.mount
+
+mkdir -p /sherry/.sync-status
+sudo chown root:root /sherry/.sync-status
+sudo chmod 711 /sherry/.sync-status
+
+sudo touch /sherry/.guests
+
+sudo mkdir -p /csehome
+sudo chown root:root /csehome
+sudo chmod 711 /csehome
+
+sudo mkdir -p /csehome/.sync-status
+sudo chown root:root /csehome/.sync-status
+sudo chmod 711 /csehome/.sync-status
+
+exit 0

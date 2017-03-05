@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=SNUCSE Lab
+Comment=SNUCSE Lab
+Exec=/usr/bin/bacchus-sync-session
+Type=Application

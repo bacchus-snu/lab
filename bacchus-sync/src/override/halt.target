@@ -1,0 +1,9 @@
+[Unit]
+Description=Halt with Bacchus-sync
+DefaultDependencies=no
+Requires=systemd-halt-bacchus-sync.service
+After=systemd-halt-bacchus-sync.service
+AllowIsolate=yes
+
+[Install]
+Alias=ctrl-alt-del.target
