@@ -1,3 +1,9 @@
+bacchus-postdist (0.3-1) xenial; urgency=medium
+
+  * Bump version
+
+ -- JangHo Seo <jangho@jangho.kr>  Sun, 05 Mar 2017 21:43:48 +0900
+
 bacchus-postdist (0.1.2-1) xenial; urgency=medium
 
   * Add bacchus-id-setup

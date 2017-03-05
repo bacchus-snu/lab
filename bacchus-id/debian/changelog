@@ -1,3 +1,9 @@
+bacchus-id (0.3-1) xenial; urgency=medium
+
+  * Bump version
+
+ -- JangHo Seo <jangho@jangho.kr>  Sun, 05 Mar 2017 21:42:16 +0900
+
 bacchus-id (0.1-1) xenial; urgency=medium
 
   * Initial release
