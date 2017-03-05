@@ -1,0 +1,11 @@
+Source: bacchus-shutdown
+Section: misc
+Priority: optional
+Maintainer: JangHo Seo <jangho@jangho.kr>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+
+Package: bacchus-shutdown
+Architecture: all
+Depends: ${misc:Depends}, systemd
+Description: Poweroff this PC when nobody is using it

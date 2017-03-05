@@ -1,0 +1,9 @@
+[Unit]
+Description=Poweroff this PC when nobody is using it
+
+[Service]
+ExecStart=/usr/sbin/bacchus-shutdown
+WorkingDirectory=/
+
+[Install]
+WantedBy=multi-user.target
