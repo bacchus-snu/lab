@@ -7,5 +7,5 @@ Standards-Version: 3.9.6
 
 Package: bacchus-lab
 Architecture: all
-Depends: ${misc:Depends}, bacchus-cse-wallpaper, bacchus-desktop-env, bacchus-id, bacchus-lab-env, bacchus-misc, bacchus-postdist, bacchus-shudown, bacchus-snunet, bacchus-sync
+Depends: ${misc:Depends}, bacchus-cse-wallpaper, bacchus-desktop-env, bacchus-id, bacchus-lab-env, bacchus-misc, bacchus-postdist, bacchus-shutdown, bacchus-snunet, bacchus-sync
 Description: CSE Lab PC

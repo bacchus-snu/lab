@@ -1,3 +1,9 @@
+bacchus-lab (0.3-2) xenial; urgency=medium
+
+  * Fix typo
+
+ -- JangHo Seo <jangho@jangho.kr>  Sun, 05 Mar 2017 22:18:58 +0900
+
 bacchus-lab (0.3-1) xenial; urgency=medium
 
   * Initial release
