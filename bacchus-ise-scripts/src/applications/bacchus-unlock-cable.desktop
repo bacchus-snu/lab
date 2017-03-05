@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=iMPACT unlock cable
+Comment=iMPACT unlock cable
+Exec="/usr/bin/bacchus-unlock-cable"
+Terminal=false
+Type=Application
+Icon=cpu
+StartupNotify=true

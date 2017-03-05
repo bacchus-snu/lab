@@ -1,0 +1,7 @@
+#!/bin/bash
+source /opt/Xilinx/14.7/ISE_DS/settings64.sh
+export XIL_IMPACT_USE_LIBUSB=1
+impact -batch <<EOF
+setmode -bs
+cleancablelock
+EOF
