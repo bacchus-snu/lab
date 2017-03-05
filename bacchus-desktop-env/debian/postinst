@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+rm -f /etc/fonts/conf.d/56-emojione-color.conf
+dconf update
+
+exit 0

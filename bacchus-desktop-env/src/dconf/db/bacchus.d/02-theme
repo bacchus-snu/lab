@@ -1,0 +1,15 @@
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/backgrounds/cse/cse-wallpaper.png'
+[org/gnome/desktop/screensaver]
+picture-uri='file:///usr/share/backgrounds/cse/cse-lockscreen.jpg'
+[org/gnome/desktop/interface]
+gtk-theme='Adapta'
+icon-theme='Papirus'
+monospace-font-name='Monospace 11'
+font-name='Sans 11'
+document-font-name='Sans 11'
+[org/gnome/desktop/wm/preferences]
+titlebar-font='Sans 11'
+[org/gnome/shell]
+enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'please_log_out@bacchus.snucse.org']
+favorite-apps=['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Terminal.desktop', 'atom.desktop', 'org.gnome.gnome-2048.desktop']
