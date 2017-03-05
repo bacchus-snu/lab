@@ -25,6 +25,7 @@ Address=$ip/24
 Gateway=$gateway
 DNS=147.46.80.1
 DNS=147.46.37.10
+DHCP=no
 EOF
 
 hostnamectl set-hostname "$hostname"
