@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /usr/share/xsessions
+rename 's/.desktop.old$/.desktop/' *.desktop.old
+
+exit 0

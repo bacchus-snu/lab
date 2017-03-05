@@ -3,7 +3,7 @@ Description="Home directory"
 After=network.target
 
 [Mount]
-What=sherry.snucse.org:/csehome
+What=147.46.78.91:/csehome
 Where=/sherry
 Type=nfs4
 Options=rsize=32768,wsize=32768

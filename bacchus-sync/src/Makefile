@@ -13,5 +13,5 @@ install: all
 	cp -rT systemd $(DESTDIR)/usr/lib/systemd/system/
 	mkdir -p $(DESTDIR)/usr/share/xsessions
 	cp snucse-lab.desktop $(DESTDIR)/usr/share/xsessions/
-	mkdir -p $(DESTDIR)/etc/gdm
-	cp -rT gdm $(DESTDIR)/etc/gdm
+	mkdir -p $(DESTDIR)/etc/gdm3
+	cp -rT gdm $(DESTDIR)/etc/gdm3

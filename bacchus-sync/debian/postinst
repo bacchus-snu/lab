@@ -26,4 +26,22 @@ sudo mkdir -p /csehome/.sync-status
 sudo chown root:root /csehome/.sync-status
 sudo chmod 711 /csehome/.sync-status
 
+cd /etc/gdm3
+mv -f PostLogin/Default PostLogin/Default.old
+mv -f PostSession/Default PostSession/Default.old
+
+cat >> PostLogin/Default <<EOF
+#!/bin/bash
+[[ -x /etc/gdm3/PostLogin/Default.bacchus-sync.sh ]] && exec /etc/gdm3/PostLogin/Default.bacchus-sync.sh
+exit 0
+EOF
+
+cat >> PostSession/Default <<EOF
+#!/bin/bash
+[[ -x /etc/gdm3/PostSession/Default.bacchus-sync.sh ]] && exec /etc/gdm3/PostSession/Default.bacchus-sync.sh
+exit 0
+EOF
+
+chmod +x PostLogin/Default PostSession/Default
+
 exit 0
