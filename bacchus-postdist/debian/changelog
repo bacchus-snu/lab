@@ -1,3 +1,9 @@
+bacchus-postdist (0.1.2-1) xenial; urgency=medium
+
+  * Add bacchus-id-setup
+
+ -- JangHo Seo <jangho@jangho.kr>  Sun, 05 Mar 2017 18:18:12 +0900
+
 bacchus-postdist (0.1.1-1) xenial; urgency=medium
 
   * Fix description for systemd unit
