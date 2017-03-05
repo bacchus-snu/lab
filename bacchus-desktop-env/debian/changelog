@@ -1,3 +1,9 @@
+bacchus-desktop-env (0.3-2) xenial; urgency=medium
+
+  * Fix postinst hook
+
+ -- JangHo Seo <jangho@jangho.kr>  Sun, 05 Mar 2017 22:34:10 +0900
+
 bacchus-desktop-env (0.3-1) xenial; urgency=medium
 
   * Bump version

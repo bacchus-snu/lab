@@ -2,6 +2,9 @@
 
 set -e
 
+systemctl enable gdm.service
+systemctl disable NetworkManager.service
+
 cd /usr/share/gnome-shell
 [[ -f gnome-shell-theme.gresource ]] && mv -f gnome-shell-theme.gresource gnome-shell-theme.gresource~
 ln -sf /usr/share/themes/Adapta/gnome-shell/gnome-shell-theme.gresource
