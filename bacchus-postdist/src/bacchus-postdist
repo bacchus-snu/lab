@@ -9,5 +9,5 @@ systemctl disable bacchus-postdist
 sync
 sleep 1m
 sync
-reboot --force
+poweroff --force
 exit 0
