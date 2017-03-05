@@ -32,6 +32,10 @@ while IFS='' read -r line || [[ -n "$line" ]]
 do
   if [[ "$line" == "$USER" ]]
   then
+    rm -rf /csehome/"$USER"
+    cp -r /sherry/.skel /csehome/"$USER"
+    chown -R "$USER":"$(id -gn "$USER")" /csehome/"$USER"
+    chmod 700 /csehome/"$USER"
     exit 0
   fi
 done < /sherry/.guests

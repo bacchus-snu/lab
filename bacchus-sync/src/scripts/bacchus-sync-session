@@ -14,8 +14,7 @@ function domain_transient_login() {
   cp -rT /sherry/.skel "$TMP_HOME"
   chown -R "$USER":"$(id -gn "$USER")" "$TMP_HOME"
   chmod 700 "$TMP_HOME"
-  HOME="$TMP_HOME"
-  gnome-session --session=gnome
+  HOME="$TMP_HOME" gnome-session --session=gnome
 }
 
 # Local user: exit
