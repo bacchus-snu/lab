@@ -1,3 +1,9 @@
+bacchus-postdist (0.3.2-1) xenial; urgency=medium
+
+  * Reboot
+
+ -- JangHo Seo <jangho@jangho.kr>  Mon, 06 Mar 2017 05:51:23 +0900
+
 bacchus-postdist (0.3.1-1) xenial; urgency=medium
 
   * Do not reboot
