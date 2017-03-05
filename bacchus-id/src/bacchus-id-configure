@@ -2,7 +2,7 @@
 
 set -e
 
-systemctl start nmbd
+systemctl restart nmbd
 systemctl enable nmbd
 systemctl stop smbd
 systemctl disable smbd

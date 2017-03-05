@@ -1,3 +1,9 @@
+bacchus-id (0.3.1-1) xenial; urgency=medium
+
+  * Ensures service status when setup/configure
+
+ -- JangHo Seo <jangho@jangho.kr>  Mon, 06 Mar 2017 04:55:07 +0900
+
 bacchus-id (0.3-1) xenial; urgency=medium
 
   * Bump version

@@ -268,3 +268,7 @@ cat > /etc/samba/smb.conf <<EOF
 # file names are not case sensitive
    case sensitive = no
 EOF
+
+systemctl stop smbd
+systemctl restart nmbd
+systemctl restart winbind
