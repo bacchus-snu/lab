@@ -2,12 +2,14 @@
 
 ## PPA dependencies
 
-* ppa:eosrei/fonts
-* ppa:papirus/papirus
 * ppa:cmssnu/os-env
 * ppa:mmk2410/intellij-idea
-* ppa:tista/adapta
+* ppa:webupd8team/atom
 
-## DEB sources
+## Repositories
 
-* hancomoffice-hwpviewer: http://www.hancom.com/cs_center/csDownload.do
+```bash
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+```
