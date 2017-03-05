@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Vivado 2016.4
+Comment=Vivado 2016.4
+Exec="/usr/bin/bacchus-vivado"
+Terminal=false
+Type=Application
+Icon=cpu
+StartupNotify=true
