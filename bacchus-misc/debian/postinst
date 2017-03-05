@@ -1,3 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
-exec bacchus-misc
+set -e
+
+timedatectl set-ntp true
+sed -i 's/GRUB_TIMEOUT=[0-9]*/GRUB_TIMEOUT=1/' /etc/default/grub
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/' /etc/default/grub
+update-grub
+
+exit 0

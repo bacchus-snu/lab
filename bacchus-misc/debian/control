@@ -7,5 +7,5 @@ Standards-Version: 3.9.6
 
 Package: bacchus-misc
 Architecture: all
-Depends: ${misc:Depends}, bash, grub, systemd
+Depends: ${misc:Depends}, bash, grub2-common, systemd
 Description: Miscellaneous settings after installing Ubuntu
