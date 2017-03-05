@@ -1,3 +1,9 @@
+bacchus-lab-env (0.3-3) xenial; urgency=medium
+
+  * Add scala, cuda, and python packages
+
+ -- JangHo Seo <jangho@jangho.kr>  Sun, 05 Mar 2017 23:42:43 +0900
+
 bacchus-lab-env (0.3-2) xenial; urgency=medium
 
   * Fix postinst hook
