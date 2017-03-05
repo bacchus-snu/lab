@@ -1,3 +1,9 @@
+bacchus-misc (0.3-2) xenial; urgency=medium
+
+  * grub timeout=0
+
+ -- JangHo Seo <jangho@jangho.kr>  Sun, 05 Mar 2017 23:56:35 +0900
+
 bacchus-misc (0.3-1) xenial; urgency=medium
 
   * Bump version
