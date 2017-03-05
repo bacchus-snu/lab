@@ -7,5 +7,5 @@ Standards-Version: 3.9.6
 
 Package: bacchus-snunet
 Architecture: all
-Depends: ${misc:Depends}, gawk, grep, bash, hostname, systemd, bacchus-pcdb
+Depends: ${misc:Depends}, gawk, grep, bash, hostname, systemd, bacchus-pcdb, coreutils
 Description: Connecting to SNUNET
