@@ -1,3 +1,9 @@
+bacchus-misc (0.3-3) xenial; urgency=medium
+
+  * nomodeset
+
+ -- JangHo Seo <jangho@jangho.kr>  Mon, 06 Mar 2017 00:13:52 +0900
+
 bacchus-misc (0.3-2) xenial; urgency=medium
 
   * grub timeout=0
