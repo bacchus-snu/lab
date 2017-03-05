@@ -12,4 +12,4 @@ document-font-name='Sans 11'
 titlebar-font='Sans 11'
 [org/gnome/shell]
 enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'please_log_out@bacchus.snucse.org']
-favorite-apps=['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Terminal.desktop', 'atom.desktop', 'org.gnome.gnome-2048.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'firefox.desktop', 'gnome-terminal.desktop', 'atom.desktop', 'org.gnome.gnome-2048.desktop']
