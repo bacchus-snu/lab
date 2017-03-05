@@ -6,6 +6,8 @@ set -e
 /usr/sbin/bacchus-id-setup
 
 systemctl disable bacchus-postdist
+sync
 sleep 1m
+sync
 reboot --force
 exit 0

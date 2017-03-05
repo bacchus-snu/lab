@@ -1,3 +1,9 @@
+bacchus-postdist (0.3.5-1) xenial; urgency=medium
+
+  * sync before reboot
+
+ -- JangHo Seo <jangho@jangho.kr>  Mon, 06 Mar 2017 06:28:51 +0900
+
 bacchus-postdist (0.3.4-1) xenial; urgency=medium
 
   * reboot --force
