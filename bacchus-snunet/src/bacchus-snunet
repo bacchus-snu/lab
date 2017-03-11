@@ -18,7 +18,7 @@ iface $iface inet static
   address $ip
   netmask 24
   gateway $gateway
-  dns-nameservers 147.46.801 147.46.37.10
+  dns-nameservers 147.46.80.1 147.46.37.10
 EOF
 
 hostnamectl set-hostname "$hostname"
