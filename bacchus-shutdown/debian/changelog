@@ -1,3 +1,9 @@
+bacchus-shutdown (0.3.1-1) xenial; urgency=medium
+
+  * persistance false
+
+ -- Yoonmi Roh (norang) <norangLemon@gmail.com>  Sat, 11 Mar 2017 14:06:15 +0000
+
 bacchus-shutdown (0.3-1) xenial; urgency=medium
 
   * Bump version
