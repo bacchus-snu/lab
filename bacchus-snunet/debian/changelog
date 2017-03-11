@@ -1,3 +1,9 @@
+bacchus-snunet (0.4.0-1) xenial; urgency=medium
+
+  * Use networking instead of systemd-networkd
+
+ -- Yoonmi Roh (norang) <norangLemon@gmail.com>  Sat, 11 Mar 2017 13:40:07 +0000
+
 bacchus-snunet (0.3.1-2) xenial; urgency=medium
 
   * prevent dhclient from running
