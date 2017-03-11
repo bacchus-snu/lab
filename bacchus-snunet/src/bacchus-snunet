@@ -14,7 +14,7 @@ auto lo
 iface lo inet loopback
 
 auto $iface
-iface $iface inet stati
+iface $iface inet static
   address $ip
   netmask 24
   gateway $gateway
