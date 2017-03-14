@@ -35,7 +35,7 @@ do
     RET=$?
     if [[ $RET -eq 3 ]]
     then
-      domain_transient_login
+      gnome-session --session=gnome
       exit 0
     fi
     exit 1

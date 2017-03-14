@@ -1,3 +1,9 @@
+bacchus-sync (0.3.2-1) xenial; urgency=medium
+
+  * Domain guests: use /csehome, not /tmp
+
+ -- JangHo Seo <jangho@jangho.kr>  Tue, 14 Mar 2017 19:17:59 +0900
+
 bacchus-sync (0.3.1-1) xenial; urgency=medium
 
   * Create transient directory for login process of domain guest
