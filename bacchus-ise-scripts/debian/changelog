@@ -1,3 +1,9 @@
+bacchus-ise-scripts (0.2-1) xenial; urgency=medium
+
+  * libusb.so
+
+ -- JangHo Seo <jangho@jangho.kr>  Thu, 16 Mar 2017 00:19:34 +0900
+
 bacchus-ise-scripts (0.1-1) xenial; urgency=medium
 
   * Initial release
