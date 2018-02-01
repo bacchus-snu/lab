@@ -1,7 +1,7 @@
 Source: bacchus-misc
 Section: misc
 Priority: optional
-Maintainer: JangHo Seo <jangho@jangho.kr>
+Maintainer: Bacchus <contact@bacchus.snucse.org>
 Build-Depends: debhelper (>=9)
 Standards-Version: 3.9.6
 

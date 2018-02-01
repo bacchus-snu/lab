@@ -1,7 +1,7 @@
 Source: bacchus-sync
 Section: net
 Priority: optional
-Maintainer: JangHo Seo <jangho@jangho.kr>
+Maintainer: Bacchus <contact@bacchus.snucse.org>
 Build-Depends: debhelper (>=9), valac, build-essential, libgtk-3-dev
 Standards-Version: 3.9.6
 

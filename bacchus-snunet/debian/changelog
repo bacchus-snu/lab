@@ -1,3 +1,9 @@
+bacchus-snunet (0.5-1) xenial; urgency=medium
+
+  * Change maintainer
+
+ -- Bacchus <contact@bacchus.snucse.org>  Fri, 02 Feb 2018 02:41:59 +0900
+
 bacchus-snunet (0.4.2-1) xenial; urgency=medium
 
   * Fix typo
