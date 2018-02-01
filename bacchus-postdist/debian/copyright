@@ -3,11 +3,11 @@ Upstream-Name: bacchus-postdist
 Source: https://github.com/bacchus-snu/lab/tree/master/bacchus-postdist
 
 Files: *
-Copyright: 2017 JangHo Seo <jangho@jangho.kr>
+Copyright: 2018 Bacchus <contact@bacchus.snucse.org>
 License: MIT
 
 Files: debian/*
-Copyright: 2017 JangHo Seo <jangho@jangho.kr>
+Copyright: 2018 Bacchus <contact@bacchus.snucse.org>
 License: MIT
 
 License: MIT

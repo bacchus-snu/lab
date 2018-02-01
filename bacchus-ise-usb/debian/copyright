@@ -3,13 +3,11 @@ Upstream-Name: bacchus-ise-usb
 Source: https://github.com/bacchus-snu/lab/tree/master/bacchus-ise-usb
 
 Files: *
-Copyright: 2017 JangHo Seo <jangho@jangho.kr>
-           2017 JongHun Park <whdgnsdl887@gmail.com>
+Copyright: 2018 Bacchus <contact@bacchus.snucse.org>
 License: MIT
 
 Files: debian/*
-Copyright: 2017 JangHo Seo <jangho@jangho.kr>
-           2017 JongHun Park <whdgnsdl887@gmail.com>
+Copyright: 2018 Bacchus <contact@bacchus.snucse.org>
 License: MIT
 
 License: MIT
