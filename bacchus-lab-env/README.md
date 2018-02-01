@@ -2,7 +2,6 @@
 
 ## PPA dependencies
 
-* ppa:cmssnu/os-env
 * ppa:mmk2410/intellij-idea
 * ppa:webupd8team/atom
 

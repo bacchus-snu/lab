@@ -1,8 +1,9 @@
 bacchus-lab-env (0.4-1) xenial; urgency=medium
 
   * Change maintainer
+  * Remove dependency to cmssnu
 
- -- Bacchus <contact@bacchus.snucse.org>  Fri, 02 Feb 2018 02:41:59 +0900
+ -- Bacchus <contact@bacchus.snucse.org>  Fri, 02 Feb 2018 03:05:55 +0900
 
 bacchus-lab-env (0.3-5) xenial; urgency=medium
 
