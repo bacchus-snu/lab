@@ -1,3 +1,9 @@
+bacchus-snunet (0.6-1) xenial; urgency=medium
+
+  * Change due to bacchus-pcdb update
+
+ -- YeonGyu Jeong <81887821@hanmail.net>  Fri, 30 Mar 2018 19:41:55 +0900
+
 bacchus-snunet (0.5-1) xenial; urgency=medium
 
   * Change maintainer

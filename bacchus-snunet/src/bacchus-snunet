@@ -7,7 +7,7 @@ pc=$(/usr/sbin/bacchus-pcdb-lookup)
 hostname=$(echo "$pc" | awk '{print $1}')
 ip=$(echo "$pc" | awk '{print $2}')
 gateway=$(echo "$ip" | awk -F"." '{print $1"."$2"."$3".1"}')
-iface=$(echo "$pc" | awk '{print $4}')
+iface=$(echo "$pc" | awk '{print $5}')
 
 cat > /etc/network/interfaces <<EOF
 auto lo
