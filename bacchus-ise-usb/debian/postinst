@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# Reload udev rules
-[ -x /sbin/udevadm ] && /sbin/udevadm control --reload-rules
-
-#DEBHELPER#
-
-exit 0
-

@@ -1,3 +1,16 @@
+bacchus-postdist (0.4.2-1) bionic; urgency=medium
+
+  * fixed Dependency problem
+  * remove bacchus-id from source
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Mon, 27 Aug 2018 19:06:01 +0900
+
+bacchus-postdist (0.4.1-1) bionic; urgency=medium
+
+  * Repackaging for 18.04 LTS (Bionic Beaver)
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Thu, 02 Aug 2018 17:13:30 +0900
+
 bacchus-postdist (0.4-1) xenial; urgency=medium
 
   * Change maintainer

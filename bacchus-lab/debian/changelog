@@ -1,3 +1,15 @@
+bacchus-lab (0.4.2-1) bionic; urgency=medium
+
+  * Resolve Dependency problem
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Mon, 27 Aug 2018 18:22:48 +0900
+
+bacchus-lab (0.4.1-1) bionic; urgency=medium
+
+  * Repackaging for 18.04 LTS (Bionic Beaver) 
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Thu, 02 Aug 2018 16:52:53 +0900
+
 bacchus-lab (0.4-1) xenial; urgency=medium
 
   * Change maintainer

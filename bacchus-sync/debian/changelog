@@ -1,3 +1,15 @@
+bacchus-sync (0.4.2-1) bionic; urgency=medium
+
+  * fixed Dependency problem
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Mon, 27 Aug 2018 19:09:36 +0900
+
+bacchus-sync (0.4.1-1) bionic; urgency=medium
+
+  * Repackaging due to 18.04 LTS (Bionic Beaver)
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Mon, 20 Aug 2018 16:12:31 +0900
+
 bacchus-sync (0.4-1) xenial; urgency=medium
 
   * Change maintainer

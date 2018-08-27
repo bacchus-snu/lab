@@ -7,5 +7,5 @@ Standards-Version: 3.9.6
 
 Package: bacchus-desktop-env
 Architecture: all
-Depends: ${misc:Depends}, gnome, gdm, ibus-hangul, gnome-pie, firefox, chromium-browser, gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-libav, vlc, libreoffice, p7zip, remmina, fonts-noto-cjk, fonts-noto, ibus-gtk3, ibus-gtk, papirus-icon-theme, fonts-emojione-svginot, fonts-nanum-coding, fonts-hack-ttf, fonts-dejavu-core, hancomoffice-hwpviewer, libreoffice-style-papirus, dmz-cursor-theme, rhythmbox, adapta-gtk-theme, gnome-shell-extension-please-log-out, filezilla, meld, gimp, fonts-roboto, dconf-cli, policykit-1, bacchus-cse-wallpaper
+Depends: ${misc:Depends}, gnome, gnome-session, ibus-hangul, gnome-pie, firefox, chromium-browser, gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-libav, vlc, libreoffice, p7zip, remmina, fonts-noto-cjk, fonts-noto, ibus-gtk3, ibus-gtk, papirus-icon-theme, fonts-twemoji-svginot, fonts-nanum-coding, fonts-hack-ttf, fonts-dejavu-core, hancomoffice-hwpviewer, libreoffice-style-papirus, dmz-cursor-theme, rhythmbox, adapta-gtk-theme, gnome-shell-extension-please-log-out, filezilla, meld, gimp, fonts-roboto, dconf-cli, policykit-1, bacchus-cse-wallpaper
 Description: Desktop environment

@@ -1,3 +1,15 @@
+bacchus-lab-env (0.4.3-1) bionic; urgency=medium
+
+  * fixed Dependency problem
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Mon, 27 Aug 2018 19:03:28 +0900
+
+bacchus-lab-env (0.4.2-1) bionic; urgency=medium
+
+  * Repackaging for 18.04 LTS (Bionic Beaver)
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Thu, 02 Aug 2018 16:58:19 +0900
+
 bacchus-lab-env (0.4.1-1) xenial; urgency=medium
 
   * Remove dependency to rust-doc

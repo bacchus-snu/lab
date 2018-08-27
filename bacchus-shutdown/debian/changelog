@@ -1,3 +1,9 @@
+bacchus-shutdown (0.4.1-1) bionic; urgency=medium
+
+  * Repackaging for 18.04 LTS (Bionic Beaver)
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Thu, 02 Aug 2018 17:16:05 +0900
+
 bacchus-shutdown (0.4-1) xenial; urgency=medium
 
   * Change maintainer

@@ -3,7 +3,6 @@
 set -e
 
 /usr/sbin/bacchus-snunet
-/usr/sbin/bacchus-id-setup
 
 systemctl disable bacchus-postdist
 sync

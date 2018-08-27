@@ -1,3 +1,27 @@
+bacchus-snunet (0.7.3-1) bionic; urgency=medium
+
+  * Remove reboot due to scripting
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Mon, 20 Aug 2018 17:37:01 +0900
+
+bacchus-snunet (0.7.2-1) bionic; urgency=medium
+
+  * Fix typo
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Thu, 02 Aug 2018 18:35:06 +0900
+
+bacchus-snunet (0.7.1-1) bionic; urgency=medium
+
+  * Indent fix
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Thu, 02 Aug 2018 18:19:32 +0900
+
+bacchus-snunet (0.7.0-1) bionic; urgency=medium
+
+  * Change due to netplan use
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Thu, 02 Aug 2018 17:57:36 +0900
+
 bacchus-snunet (0.6-1) xenial; urgency=medium
 
   * Change due to bacchus-pcdb update

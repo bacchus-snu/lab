@@ -7,5 +7,5 @@ Standards-Version: 3.9.6
 
 Package: bacchus-id
 Architecture: all
-Depends: ${misc:Depends}, samba, winbind, libpam-winbind, libnss-winbind
+Depends: ${misc:Depends}, libpam-ldap, libnss-ldapd
 Description: CSE ID integration for lab PCs
