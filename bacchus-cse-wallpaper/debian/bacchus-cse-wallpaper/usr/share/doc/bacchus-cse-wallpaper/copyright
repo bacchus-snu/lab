@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: bacchus-id
-Source: https://github.com/bacchus-snu/lab/tree/master/bacchus-id
+Upstream-Name: bacchus-cse-wallpaper
+Source: http://www.oxygenna.com/news/brand-new-set-of-40-material-design-backgrounds
 
 Files: *
-Copyright: 2018 Bacchus <contact@bacchus.snucse.org>
-License: MIT
+Copyright: 2015 Oxygenna
+           2018 Bacchus <contact@bacchus.snucse.org>
 
 Files: debian/*
 Copyright: 2018 Bacchus <contact@bacchus.snucse.org>

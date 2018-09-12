@@ -2,9 +2,8 @@
 
 set -e
 
-/usr/sbin/bacchus-snunet
-
-systemctl disable bacchus-postdist
+sudo /usr/sbin/bacchus-snunet
+sudo systemctl disable bacchus-postdist
 sync
 sleep 1m
 sync

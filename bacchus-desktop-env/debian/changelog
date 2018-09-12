@@ -1,3 +1,9 @@
+bacchus-desktop-env (0.4.3-1) bionic; urgency=medium
+
+  * remove hancom-office-viewer from dependency due to not using apt when install
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Sun, 02 Sep 2018 00:33:43 +0900
+
 bacchus-desktop-env (0.4.2-1) bionic; urgency=medium
 
   * fixed dependency problem

@@ -1,3 +1,21 @@
+bacchus-lab-env (0.4.6-1) bionic; urgency=medium
+
+  * remove eclipse-like packages from dependency to do manual install
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Tue, 11 Sep 2018 15:40:13 +0900
+
+bacchus-lab-env (0.4.5-1) bionic; urgency=medium
+
+  * remove Intellij-idea-community from dependency due to 403 problem 
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Mon, 27 Aug 2018 21:50:13 +0900
+
+bacchus-lab-env (0.4.4-1) bionic; urgency=medium
+
+  * fixed Dependency problem again
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Mon, 27 Aug 2018 20:34:25 +0900
+
 bacchus-lab-env (0.4.3-1) bionic; urgency=medium
 
   * fixed Dependency problem
