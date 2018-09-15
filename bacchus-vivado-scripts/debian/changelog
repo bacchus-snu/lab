@@ -1,3 +1,9 @@
+bacchus-vivado-scripts (0.3.1-1) bionic; urgency=medium
+
+  * Repackaging for 18.04 LTS (Bionic Beaver)
+
+ -- Moduhary Jeong <moduhary@bacchus.snucse.org>  Thu, 02 Aug 2018 17:20:02 +0900
+
 bacchus-vivado-scripts (0.3-1) xenial; urgency=medium
 
   * Change maintainer

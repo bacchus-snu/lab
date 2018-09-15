@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=ISE Project Navigator
-Comment=Xilinx ISE Project Navigator
-Exec="/usr/bin/bacchus-ise"
-Terminal=false
-Type=Application
-Icon=cpu
-StartupNotify=true
