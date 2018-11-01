@@ -187,7 +187,7 @@ class Configuration {
       case StringKey.WRITE:
         return "w";
       case StringKey.RSYNC_EXCLUDE:
-		return "--exclude=.cache/"
+        return "--exclude=.cache/";
       default:
         fatal("Unknown StringKey");
         return "";
