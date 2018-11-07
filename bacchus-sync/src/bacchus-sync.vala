@@ -93,6 +93,7 @@ enum StringKey {
   USER,       /* Environment variable key */
   READ,
   WRITE,
+  RSYNC_EXCLUDE,
 }
 
 /**
@@ -185,6 +186,8 @@ class Configuration {
         return "r";
       case StringKey.WRITE:
         return "w";
+      case StringKey.RSYNC_EXCLUDE:
+        return "--exclude=.cache/";
       default:
         fatal("Unknown StringKey");
         return "";
@@ -565,6 +568,7 @@ class DownloadTask : Object {
             Configuration.stringKey(StringKey.RSYNC_AZ),
             Configuration.stringKey(StringKey.RSYNC_DELETE),
             Configuration.stringKey(StringKey.RSYNC_PROGRESS2),
+            Configuration.stringKey(StringKey.RSYNC_EXCLUDE),
             Configuration.stringKey(StringKey.NFS_HOME_OF).printf(userName),
             Configuration.stringKey(StringKey.LOCAL_HOME),
           },
@@ -629,6 +633,7 @@ class UploadTask : Object {
             Configuration.stringKey(StringKey.RSYNC_AZ),
             Configuration.stringKey(StringKey.RSYNC_DELETE),
             Configuration.stringKey(StringKey.RSYNC_PROGRESS2),
+            Configuration.stringKey(StringKey.RSYNC_EXCLUDE),
             Configuration.stringKey(StringKey.LOCAL_HOME_OF).printf(userName),
             Configuration.stringKey(StringKey.NFS_HOME),
           },
