@@ -7,9 +7,9 @@ ufw default deny incoming
 ufw default deny outgoing
 ufw default deny routed
 ufw allow 22/tcp
-ufw allow out to 147.46.240.37 # colada
 ufw allow out to 147.46.80.1 # 학교 네임서버 1
 ufw allow out to 147.46.37.10 # 학교 네임서버 2
 ufw allow out to 147.46.78.91 # sherry
+ufw allow out to 147.46.78.164 # id 서버
 
 ufw --force enable
