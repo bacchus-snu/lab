@@ -1,0 +1,11 @@
+Source: bacchus-exam-env
+Section: net
+Priority: optional
+Maintainer: Bacchus <contact@bacchus.snucse.org>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+
+Package: bacchus-exam-env
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, systemd, ufw
+Description: Bacchus exam environment helper

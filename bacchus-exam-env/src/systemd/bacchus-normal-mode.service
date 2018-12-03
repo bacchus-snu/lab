@@ -1,0 +1,8 @@
+[Unit]
+Description=Lab normal mode
+Conflicts=bacchus-exam-mode.service
+
+[Service]
+ExecStart=/usr/bin/exam-ufw-disable
+Type=oneshot
+RemainAfterExit=yes

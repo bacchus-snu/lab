@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ufw --force disable
+ufw --force reset

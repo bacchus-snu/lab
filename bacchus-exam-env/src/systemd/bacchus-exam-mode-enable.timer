@@ -1,0 +1,10 @@
+[Unit]
+Description=Exam mode start timer
+
+[Timer]
+OnCalendar=2018-12-05 00:00:00
+Unit=bacchus-exam-mode.service
+Persistent=true
+
+[Install]
+WantedBy=multi-user.target
