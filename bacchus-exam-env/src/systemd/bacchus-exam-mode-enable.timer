@@ -2,7 +2,7 @@
 Description=Exam mode start timer
 
 [Timer]
-OnCalendar=2018-12-05 00:00:00
+OnCalendar=2018-12-05 17:30:00
 Unit=bacchus-exam-mode.service
 Persistent=true
 
