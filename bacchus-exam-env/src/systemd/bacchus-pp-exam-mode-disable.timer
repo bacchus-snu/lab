@@ -2,7 +2,7 @@
 Description=Exam mode end timer
 
 [Timer]
-OnCalendar=2018-12-05 21:10:00
+OnCalendar=2018-12-16 19:00:00
 Unit=bacchus-normal-mode.service
 Persistent=true
 

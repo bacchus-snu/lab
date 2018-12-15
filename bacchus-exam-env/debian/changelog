@@ -1,3 +1,9 @@
+bacchus-exam-env (0.2-1) bionic; urgency=medium
+
+  * Timer set for 2018 fall sf and pp
+
+ -- YeonGyu Jeong <81887821@hanmail.net>  Sat, 15 Dec 2018 17:25:48 +0900
+
 bacchus-exam-env (0.1-1) bionic; urgency=medium
 
   * Initial release, timer set for 2018 fall swpp exam

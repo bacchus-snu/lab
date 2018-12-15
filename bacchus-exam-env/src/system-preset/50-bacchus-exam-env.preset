@@ -1,2 +1,4 @@
-enable bacchus-exam-mode-enable.timer
-enable bacchus-exam-mode-disable.timer
+enable bacchus-pp-exam-mode-disable.timer
+enable bacchus-pp-exam-mode-enable.timer
+enable bacchus-sf-exam-mode-disable.timer
+enable bacchus-sf-exam-mode-enable.timer
