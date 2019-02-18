@@ -1,4 +1,10 @@
-pam-bacchus (0.1-1) bionic; urgency=medium
+pam-bacchus (0.1.2-1) bionic; urgency=medium
+
+  * Updated Makefile to use $(DESTDIR)
+
+ -- YeonGyu Jeong <81887821@hanmail.net>  Tue, 19 Feb 2019 08:17:09 +0900
+
+pam-bacchus (0.1.1-1) bionic; urgency=medium
 
   * Initial release
 
