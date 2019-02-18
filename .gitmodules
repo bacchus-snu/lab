@@ -1,0 +1,3 @@
+[submodule "pam-bacchus/src/pam_bacchus"]
+	path = pam-bacchus/src/pam_bacchus
+	url = https://github.com/bacchus-snu/pam_bacchus.git
