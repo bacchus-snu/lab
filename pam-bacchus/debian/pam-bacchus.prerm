@@ -4,4 +4,4 @@ set -e
 
 #DEBHELPER#
 
-pam-auth-update --package --remove ldap
+pam-auth-update --package --remove bacchus
