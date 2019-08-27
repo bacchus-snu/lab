@@ -1,0 +1,14 @@
+Source: bacchus-system-updater
+Section: misc
+Priority: optional
+Maintainer: Bacchus <contact@bacchus.snucse.org>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: https://github.com/bacchus-snu
+#Vcs-Git: https://anonscm.debian.org/git/collab-maint/bacchus-system-updater.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/bacchus-system-updater.git
+
+Package: bacchus-system-updater
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Root subvolume updater script for lab computers
