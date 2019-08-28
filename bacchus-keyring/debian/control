@@ -1,0 +1,12 @@
+Source: bacchus-keyring
+Section: misc
+Priority: optional
+Maintainer: Bacchus <contact@bacchus.snucse.org>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+
+Package: bacchus-keyring
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: GnuPG keys of bacchus members
+ This package contains the keyring with all the bacchus membeers' keys.

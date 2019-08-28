@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [[ -z "$1" ]]; then
+	echo "usage: $0 keyid"
+	exit 1
+fi
+
+GPG_OPTIONS="--no-auto-check-trustdb --options /dev/null --quiet"
+
+keyid=$1
+keyid="0x$(gpg $GPG_OPTIONS --with-colons --keyid long --list-keys "$keyid" |  grep '^pub' | cut -d: -f5)"
+
+# test if key exits already
+if [[ -e "keys/$keyid" ]]; then
+	echo "$keyid already in keyring"
+	exit 1
+fi
+
+echo "adding key $keyid:"
+gpg $GPG_OPTIONS --keyid 0xlong --list-keys "$keyid"
+echo -n "really add $keyid? [y/N] "
+read confirm
+
+if [ "$confirm" != "y" -a "$confirm" != "Y" ]; then
+	exit 1
+fi
+
+gpg $GPG_OPTIONS --export "$keyid" --export-options export-minimal > "keys/$keyid"
+echo "key added to keys/$keyid"
