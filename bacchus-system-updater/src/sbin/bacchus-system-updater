@@ -36,10 +36,10 @@ function check_config() {
 }
 
 function get_last_received_snapshot() {
-	if [ ! -f "${LAST_RECEIVED_SNAPSHOT_FILE}" ]; then
-		echo -n ""
-	else
+	if [ -f "${LAST_RECEIVED_SNAPSHOT_FILE}" ]; then
 		cat "${LAST_RECEIVED_SNAPSHOT_FILE}"
+	else
+		echo -n ""
 	fi
 }
 
