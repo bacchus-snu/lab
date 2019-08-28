@@ -33,6 +33,14 @@ function check_config() {
 	elif ! mountpoint --quiet "${BTRFS_TOPLEVEL}"; then
 		mount "${BTRFS_TOPLEVEL}" || die "Mounting btrfs toplevel failed"
 	fi
+
+	if [ ! -d "${BTRFS_TOPLEVEL}" ]; then
+		mkdir "${BTRFS_TOPLEVEL}/snapshots" || die "Cannot create snapshot directory"
+	fi
+
+	if [ ! -f "${LAST_RECEIVED_SNAPSHOT_FILE}" ]; then
+		mkdir -p "${LAST_RECEIVED_SNAPSHOT_FILE%/*}" || die "Cannot create last received snapshot file directory"
+	fi
 }
 
 function get_last_received_snapshot() {
@@ -105,3 +113,5 @@ function clean_up_snapshots() {
 		fi
 	done <<< "$(find "${BTRFS_TOPLEVEL}/snapshots")"
 }
+
+main "$@"
