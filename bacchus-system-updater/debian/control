@@ -10,5 +10,5 @@ Homepage: https://github.com/bacchus-snu
 
 Package: bacchus-system-updater
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, coreutils, rsync, btrfs-progs, openssh-client, gpg, bash, bacchus-keyring
 Description: Root subvolume updater script for lab computers
