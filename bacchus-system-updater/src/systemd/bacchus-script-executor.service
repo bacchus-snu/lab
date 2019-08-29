@@ -1,0 +1,10 @@
+[Unit]
+Description=Bacchus script executor
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/bacchus-script-executor
+
+[Install]
+WantedBy=multi-user.target
