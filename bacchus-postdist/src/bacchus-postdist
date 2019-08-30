@@ -3,9 +3,5 @@
 set -e
 
 sudo /usr/sbin/bacchus-snunet
-sudo systemctl disable bacchus-postdist
-sync
-sleep 1m
-sync
-poweroff --force
+shutdown +1
 exit 0

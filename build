@@ -40,7 +40,7 @@ cd dist
 if [[ "$arg1" = "--binary" ]]; then
   debuild --no-tgz-check -b
 else
-  debuild --tgz-check -S
+  debuild --tgz-check -S -k03C8E150CD722A38FE36868F1B88F61C415BBE09
 fi
 cd "$dir"
 exit 0
