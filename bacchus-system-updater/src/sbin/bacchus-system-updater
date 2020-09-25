@@ -1,0 +1,132 @@
+#!/bin/bash
+source '/usr/share/bacchus/bacchus-common-script.sh'
+
+readonly CONFIG_FILE='/etc/bacchus/system-updater.conf'
+# To be filled by load_config
+KEYRING=''
+BTRFS_TOPLEVEL=''
+LAST_RECEIVED_SNAPSHOT_FILE=''
+SSH_USER=''
+SSH_IDENTITY=''
+IMAGE_SERVER=''
+IMAGE_SERVER_PATH=''
+
+function main() {
+	load_config "${CONFIG_FILE}"
+	check_config
+
+	local last_received_snapshot="$(get_last_received_snapshot)" || die "Cannot read last received snapshot"
+
+	download_images
+	btrfs_receive "${last_received_snapshot}"
+	update_root_subvolume "${last_received_snapshot}"
+	clean_up_snapshots
+}
+
+function check_config() {
+	if [ ! -r "${KEYRING}" ]; then
+		die "Cannot read keyring"
+	fi
+
+	if [ ! -d "${BTRFS_TOPLEVEL}" ]; then
+		die "Btrfs toplevel mountpoint does not exist"
+	elif ! mountpoint --quiet "${BTRFS_TOPLEVEL}"; then
+		mount "${BTRFS_TOPLEVEL}" || die "Mounting btrfs toplevel failed"
+	fi
+
+	if [ ! -d "${BTRFS_TOPLEVEL}" ]; then
+		mkdir "${BTRFS_TOPLEVEL}/snapshots" || die "Cannot create snapshot directory"
+	fi
+
+	if [ ! -f "${LAST_RECEIVED_SNAPSHOT_FILE}" ]; then
+		mkdir -p "${LAST_RECEIVED_SNAPSHOT_FILE%/*}" || die "Cannot create last received snapshot file directory"
+	fi
+}
+
+function get_last_received_snapshot() {
+	if [ -f "${LAST_RECEIVED_SNAPSHOT_FILE}" ]; then
+		cat "${LAST_RECEIVED_SNAPSHOT_FILE}"
+	else
+		echo -n ""
+	fi
+}
+
+function download_images() {
+	rsync -rt --chmod 600 --rsh "ssh -i \"${SSH_IDENTITY}\" -o StrictHostKeyChecking=no -l \"${SSH_USER}\"" --update --delete "${IMAGE_SERVER}:${IMAGE_SERVER_PATH}/" "${BTRFS_TOPLEVEL}/images/" || die "Btrfs image download failed"
+	
+	find "${BTRFS_TOPLEVEL}/images" -type f -not -name '*.sig' -size '+0' | while read file; do
+		if [ ! -f "${file}.sig" ]; then
+			error "${file} is not signed!"
+			rm "${file}" || die "Deleting ${file} failed"
+		fi
+
+		gpg --no-default-keyring --keyring "${KEYRING}" --verify "${file}.sig" "${file}" 2>/dev/null 1>/dev/null
+		if [ $? -ne 0 ]; then
+			error "Sign verification failed: ${file}"
+			rm "${file}" "${file}.sig" || die "Deleting ${file} and ${file}.sig failed"
+		fi
+	done || exit 1
+}
+
+function btrfs_receive() {
+	local last_received_snapshot="${1}"
+	local btrfs_image
+
+	find "${BTRFS_TOPLEVEL}/images" -type f -not -name '*.sig' | sort | while read btrfs_image; do
+		if [ "${btrfs_image##*/}" \> "${last_received_snapshot}" ]; then
+			btrfs receive -f "${btrfs_image}" "${BTRFS_TOPLEVEL}/snapshots" || die "Receive ${btrfs_image} failed"
+			truncate --size 0 "${btrfs_image}"
+		fi
+	done || exit 1
+}
+
+function update_root_subvolume() {
+	local last_received_snapshot="${1}"
+	local new_root="$(find "${BTRFS_TOPLEVEL}/images" -type f -not -name '*.sig' | sort | tail -n 1)" || die "Getting new root failed"
+	local current_root="$(btrfs subvolume show / | head -n 2 | tail -n 1 | awk -F ' ' '{print $2}')" || die "Getting current root failed"
+	new_root="${new_root##*/}"
+
+	if [ "${new_root}" == "" ]; then
+		return 0
+	elif [ "${last_received_snapshot}" == "${new_root}" ]; then
+		return 0
+	fi
+
+	if [ "${current_root}" == "root" ]; then
+		btrfs subvolume delete "${BTRFS_TOPLEVEL}/old-root" 2>/dev/null 1>/dev/null
+
+		if [ -d "${BTRFS_TOPLEVEL}/old-root" ]; then
+			die "Btrfs old-root subvolume delete failed"
+		fi
+
+		mv "${BTRFS_TOPLEVEL}/root" "${BTRFS_TOPLEVEL}/old-root" || die "Moving btrfs root subvolume failed"
+	elif [ "${current_root}" == "old-root" ]; then
+		btrfs subvolume delete "${BTRFS_TOPLEVEL}/root" 2>/dev/null 1>/dev/null
+
+		if [ -d "${BTRFS_TOPLEVEL}/root" ]; then
+			die "Btrfs root subvolume delete failed"
+		fi
+	else
+		die "Unknown current root ${current_root}"
+	fi
+
+	btrfs subvolume snapshot -r "${BTRFS_TOPLEVEL}/snapshots/${new_root}" "${BTRFS_TOPLEVEL}/root" || die "Creating root subvolume failed"
+
+	echo "${new_root}" > "${LAST_RECEIVED_SNAPSHOT_FILE}" || error "Saving last received snapshot failed"
+}
+
+function clean_up_snapshots() {
+	local new_root="$(find "${BTRFS_TOPLEVEL}/snapshots" -mindepth 1 -maxdepth 1 -type d | sort | tail -n 1)" || die "Getting new root failed"
+
+	if [ "${new_root}" == "" ]; then
+		return 0
+	fi
+
+	find "${BTRFS_TOPLEVEL}/snapshots" -mindepth 1 -maxdepth 1 -type d | while read btrfs_snapshot; do
+		if [ "${btrfs_snapshot}" != "${new_root}" ]; then
+			btrfs subvolume delete "${btrfs_snapshot}" || error "Deleting snapshot ${btrfs_snapshot} failed"
+		fi
+	done
+}
+
+main "$@"

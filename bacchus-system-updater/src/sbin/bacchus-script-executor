@@ -1,0 +1,56 @@
+#!/bin/bash
+source '/usr/share/bacchus/bacchus-common-script.sh'
+
+readonly CONFIG_FILE='/etc/bacchus/script-executor.conf'
+# To be filled by load_config
+TIMESTAMP=''
+SCRIPT_DIR=''
+
+function main() {
+	load_config "${CONFIG_FILE}"
+	check_config
+	execute_newer_scripts
+	update_timestamp
+}
+function check_config() {
+	if [ -f "${TIMESTAMP}" ]; then
+		test_timestamp_modifiable
+	else
+		create_timestamp || die "Cannot create timestamp"
+	fi
+
+	if [ ! -d "${SCRIPT_DIR}" ]; then
+		die "Script directory does not exist"
+	fi
+}
+
+function test_timestamp_modifiable() {
+	local mtime=$(stat --format '%Y' "${TIMESTAMP}") || return 1
+	touch -d @9999999999 "${TIMESTAMP}" || return 1
+	touch -d "@${mtime}" "${TIMESTAMP}" && return 0
+	die "Timestamp modification has completed, but restoring has failed. Original timestamp was ${mtime}."
+}
+
+function create_timestamp() {
+	local parent_directory="${TIMESTAMP%/*}"
+
+	mkdir -p "${parent_directory}" || return 1
+	# Set mtime to epoch
+	touch -d @0 "${TIMESTAMP}" || return 1
+}
+
+function execute_newer_scripts() {
+	find -L "${SCRIPT_DIR}" -type f -executable -newer "${TIMESTAMP}" | sort | while read script; do
+		echo "=> Executing ${script}"
+		"${script}"
+		echo "=> ${script} ended with result $?"
+	done
+}
+
+function update_timestamp() {
+	if ! touch "${TIMESTAMP}"; then
+		die "Timestamp update failed"
+	fi
+}
+
+main "$@"

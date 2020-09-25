@@ -1,3 +1,9 @@
+bacchus-postdist (0.4.6-1) bionic; urgency=medium
+
+  * remove service, use shutdown instead of poweroff
+
+ -- Yongun Seong <yseong@bacchus.snucse.org>  Fri, 30 Aug 2019 11:01:32 +0900
+
 bacchus-postdist (0.4.5-1) bionic; urgency=medium
 
   * remove wakeonlan configuration for using netplan configuration

@@ -1,0 +1,17 @@
+bacchus-system-updater (0.0.2-2) bionic; urgency=medium
+
+  * Don't enable executor on install
+
+ -- Yongun Seong <yseong@bacchus.snucse.org>  Fri, 30 Aug 2019 11:14:31 +0900
+
+bacchus-system-updater (0.0.2-1) bionic; urgency=medium
+
+  * Added systemd units
+
+ -- YeonGyu Jeong <81887821@hanmail.net>  Fri, 30 Aug 2019 02:14:44 +0900
+
+bacchus-system-updater (0.0.1-1) bionic; urgency=medium
+
+  * Initial release
+
+ -- YeonGyu Jeong <81887821@hanmail.net>  Wed, 28 Aug 2019 01:41:03 +0900
