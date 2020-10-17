@@ -1,0 +1,3 @@
+#!/bin/sh
+
+systemctl enable --now bacchus-pp-exam-mode-disable.timer bacchus-pp-exam-mode-enable.timer bacchus-sf-exam-mode-disable.timer bacchus-sf-exam-mode-enable.timer

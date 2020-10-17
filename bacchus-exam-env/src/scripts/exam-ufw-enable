@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ufw --force disable
+ufw --force reset
+
+ufw default deny incoming
+ufw default deny outgoing
+ufw default deny routed
+ufw allow 22/tcp
+ufw allow out to 147.46.80.1 # 학교 네임서버 1
+ufw allow out to 147.46.37.10 # 학교 네임서버 2
+ufw allow out to 147.46.78.91 # sherry
+ufw allow out to 147.46.78.164 # id 서버
+ufw allow out to 147.46.242.187 # blanc
+ufw allow out to 147.46.242.53 # 프로그래밍 원리 제출 서버
+ufw allow out to 147.46.245.103 # 컴퓨터 신기술 특강 제출 서버
+
+ufw --force enable
