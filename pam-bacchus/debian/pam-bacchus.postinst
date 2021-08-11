@@ -5,3 +5,7 @@ set -e
 #DEBHELPER#
 
 pam-auth-update --package
+mkdir -p /etc/bacchus/keypair
+if [ ! -f /etc/bacchus/keypair/tweetnacl ]; then
+  pam_bacchus_genkey /etc/bacchus/keypair
+fi

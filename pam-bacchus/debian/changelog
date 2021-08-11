@@ -1,3 +1,9 @@
+pam-bacchus (1.1.0-2) bionic; urgency=medium
+
+  * postinst script now generates keypair
+
+ -- Wonwoo Choi <chwo9843@gmail.com>  Tue, 11 Aug 2021 13:17:11 +0000
+
 pam-bacchus (1.1.0-1) bionic; urgency=medium
 
   * Change version to match repository
