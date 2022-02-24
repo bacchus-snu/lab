@@ -1,0 +1,10 @@
+Source: bacchus-auth
+Section: misc
+Priority: optional
+Maintainer: Bacchus <contact@bacchus.snucse.org>
+Standards-Version: 4.1.3
+
+Package: bacchus-auth
+Architecture: any
+Depends: pam-bacchus (>=2.0.0), nsscache, libnss-cache
+Description: Bacchus ID authentication metapackage

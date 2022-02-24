@@ -1,13 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: pam-bacchus
-Source: https://github.com/bacchus-snu/pam_bacchus
+Upstream-Name: bacchus-auth
+Source: https://github.com/bacchus-snu/lab.git
 
 Files: *
-Copyright: 2019 Bacchus <contact@bacchus.snucse.org>
-License: MIT
-
-Files: debian/*
-Copyright: 2019 Bacchus <contact@bacchus.snucse.org>
+Copyright: Bacchus <contact@bacchus.snucse.org>
 License: MIT
 
 License: MIT
@@ -25,8 +21,8 @@ License: MIT
  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
- TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Please also look if there are files or directories which have a
